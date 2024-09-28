@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLinkIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -63,11 +63,12 @@ const Details = () => {
   const [selectedDetail, setSelectedDetail] = useState(null);
 
   return (
-    <section id="details" className="py-[200px] flex gap-10">
-      <h1 className="w-[calc((100vw-240px)/4)] text-[40px] font-bold text-neutral-100">
-        DETAILS
-      </h1>
-      <div className="w-[calc((100vw-240px)/2)] flex flex-col">
+    <section
+      id="details"
+      className="w-[70vw] mx-auto py-[100px] flex flex-col gap-10"
+    >
+      <h1 className="text-[40px] font-bold text-neutral-100">DETAILS</h1>
+      <div className="flex flex-col">
         {details.map((detail, i) => (
           <ToggleDetail
             key={i}
@@ -100,22 +101,10 @@ const ToggleDetail = ({
 
   return (
     <div className="border-t-2 border-neutral-100 overflow-hidden">
-      <motion.div
-        onClick={handleClick}
-        whileHover={{ gap: isSelected ? "12px" : "20px" }}
-        className="flex gap-3 items-center py-[24px] cursor-pointer"
-      >
-        <motion.div animate={{ rotate: isSelected ? 90 : 0 }}>
-          <ChevronRightIcon className="h-[24px] w-[24px] text-neutral-200" />
-        </motion.div>
+      <motion.div className="flex gap-3 items-center py-[24px] cursor-pointer">
         <h2 className="text-[24px] font-bold">{title}</h2>
       </motion.div>
-      <motion.div
-        initial={{ height: 0 }}
-        animate={{ height: isSelected ? "auto" : 0 }}
-        className="pl-[36px]"
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+      <div dangerouslySetInnerHTML={{ __html: content }} />
     </div>
   );
 };

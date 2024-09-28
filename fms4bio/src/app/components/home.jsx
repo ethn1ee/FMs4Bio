@@ -5,20 +5,12 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <section id="home" className="relative h-screen">
-      <h1 className="absolute bottom-[60px] z-10">
-        {"FOUNDATION MODELS FOR BIOLOGICAL DISCOVERIES"
-          .split(" ")
-          .map((word, i) => (
-            <span
-              key={i}
-              className="block text-[104px] font-[900] leading-[100%]"
-            >
-              {word}
-            </span>
-          ))}
+    <section id="home" className="relative">
+      <h1 className="text-[32px] font-extrabold text-center mt-[200px]">
+        <span className="block text-neutral-200 mb-4">AAAI 2025</span>
+        <span>FOUNDATION MODELS FOR BIOLOGICAL DISCOVERIES</span>
       </h1>
-      <div className="fixed bottom-[60px] right-[60px] flex flex-col items-end gap-2">
+      <div className="w-full flex justify-center gap-2 mt-10">
         <Link
           href="https://easychair.org/my/conference?conf=FMs4Bio25"
           target="_blank"
@@ -44,17 +36,6 @@ const Home = () => {
           </motion.div>
         </Link>
       </div>
-
-      <img
-        className="absolute top-[140px] right-[500px] md:w-[500px] lg:w-[614px] xl:w-[800px] h-auto"
-        src="/blob-0.svg"
-        alt=""
-      />
-      <img
-        className="absolute top-[40px] right-[150px] md:w-[500px] lg:w-[614px] xl:w-[800px] h-auto"
-        src="/blob-1.svg"
-        alt=""
-      />
     </section>
   );
 };

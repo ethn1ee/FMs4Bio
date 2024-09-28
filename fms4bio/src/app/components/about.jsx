@@ -2,11 +2,11 @@
 
 const About = () => {
   return (
-    <section id="about" className="py-[200px] flex gap-10">
-      <h1 className="w-[calc((100vw-240px)/4)] text-[40px] font-bold text-neutral-100">
+    <section id="about" className="w-[70vw] mx-auto py-[100px] flex flex-col gap-10">
+      <h1 className="text-[40px] font-bold text-neutral-100">
         ABOUT
       </h1>
-      <div className="w-[calc((100vw-240px)/2)]">
+      <div>
         <p>
           Foundation models (FMs) have transformed natural language
           understanding and computer vision. In particular, research on LLMs and

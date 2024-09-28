@@ -8,10 +8,14 @@ const Nav = () => {
   const [activeSection, setActiveSection] = useState("");
 
   const links = [
-    { name: "home", id: "#home" },
-    { name: "about", id: "#about" },
-    { name: "details", id: "#details" },
-    { name: "people", id: "#people" },
+    { type: "section", name: "about", href: "#about" },
+    { type: "section", name: "details", href: "#details" },
+    { type: "section", name: "people", href: "#people" },
+    {
+      type: "site",
+      name: "AAAI 2024",
+      href: "https://llms4science-community.github.io/aaai2024.html",
+    },
   ];
 
   useEffect(() => {
@@ -36,13 +40,13 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="fixed top-[60px] right-[60px] z-[1000] flex flex-col gap-[40px] items-end">
+    <nav className="fixed w-screen h-[100px] z-[1000] flex justify-end gap-[40px] px-[80px] items-center bg-white">
       {links.map((link, i) => (
-        <Link key={i} href={link.id}>
+        <Link key={i} href={link.href}>
           <motion.span
             animate={{
               color:
-                activeSection === link.id.substring(1) ? "#000000" : "#a0a0a0",
+                link.type === "section" && activeSection === link.href.substring(1) ? "#000000" : "#a0a0a0",
             }}
             className="font-semibold"
           >

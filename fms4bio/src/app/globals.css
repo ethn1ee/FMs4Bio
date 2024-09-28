@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 p, ul {
   font-size: 18px;
   margin-bottom: 20px;

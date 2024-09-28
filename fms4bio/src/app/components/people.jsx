@@ -26,22 +26,14 @@ const People = () => {
   ];
 
   return (
-    <section id="people" className="py-[200px] flex gap-10">
+    <section id="people" className="w-[70vw] mx-auto py-[100px] flex flex-col gap-10">
       <h1 className="w-[calc((100vw-240px)/4)] text-[40px] font-bold text-neutral-100">
         PEOPLE
       </h1>
 
-      <div className="w-[calc((100vw-240px)/2)] flex flex-col gap-10">
+      <div className="flex flex-col gap-10">
         <div>
-          <h2 className="text-[24px] font-bold mb-6">WORKSHOP CHAIR</h2>
-          <PeopleCard
-            name={workshopChair.name}
-            school={workshopChair.school}
-            email={workshopChair.email}
-          />
-        </div>
-        <div>
-          <h2 className="text-[24px] font-bold mb-6">WORKSHOP COMMITTEE</h2>
+          <h2 className="text-[24px] font-bold mb-6">WORKSHOP ORGANIZERS</h2>
           <div className="flex flex-wrap gap-6">
             {workshopCommittee.map((person, i) => (
               <PeopleCard
