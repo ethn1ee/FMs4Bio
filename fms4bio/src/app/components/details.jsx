@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLinkIcon, ChevronRightIcon } from "@heroicons/react/outline";
+import { ExternalLinkIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
