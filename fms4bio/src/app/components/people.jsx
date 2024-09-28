@@ -41,7 +41,7 @@ const People = () => {
           />
         </div>
         <div>
-          <h2 className="text-[24px] font-bold mb-6">WORKSHOP COMITTEE</h2>
+          <h2 className="text-[24px] font-bold mb-6">WORKSHOP COMMITTEE</h2>
           <div className="flex flex-wrap gap-6">
             {workshopCommittee.map((person, i) => (
               <PeopleCard
