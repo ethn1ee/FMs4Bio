@@ -13,9 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${hankenGrotesk.className} antialiased mx-[60px]`}>
+      <body className={`${hankenGrotesk.className} antialiased flex justify-center`}>
         <Nav />
-        {children}
+        <main className="w-[calc(100vw-120px)] max-w-[2000px]">{children}</main>
       </body>
     </html>
   );

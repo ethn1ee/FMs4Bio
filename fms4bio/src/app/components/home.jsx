@@ -37,7 +37,7 @@ const Home = () => {
       </div>
 
       <img
-        className="absolute bottom-[40px] -left-[260px] w-[614px] h-auto"
+        className="absolute top-[140px] right-[500px] w-[614px] h-auto"
         src="/blob-0.svg"
         alt=""
       />
