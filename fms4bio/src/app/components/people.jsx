@@ -63,7 +63,7 @@ const PeopleCard = ({ name, school, email }) => {
     <div className="flex flex-col gap-3">
       <div className="bg-neutral-100 size-[160px] rounded-xl"></div>
       <div className="">
-        <h3 className="text-[18px] font-semibold mb-2">{name}</h3>
+        <h3 className="text-[18px] font-semibold mb-1">{name}</h3>
         <p className="text-[14px] m-0 text-neutral-200">{school}</p>
         <p className="text-[14px] m-0 text-neutral-200">{email}</p>
       </div>
