@@ -31,7 +31,7 @@ const About = () => {
           question:&nbsp;
           <strong>
             How can we advance foundation models to transform biological
-            research?
+            research?&nbsp;
           </strong>
           This workshop brings together an interdisciplinary community of
           researchers at various levels of their career to nucleate a community
