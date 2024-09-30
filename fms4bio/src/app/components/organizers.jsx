@@ -6,16 +6,19 @@ const Organizers = () => {
       name: "Amarda Shehu",
       school: "George Mason University",
       email: "amarda@gmu.edu",
+      profile: "/profile-shehu.png"
     },
     {
       name: "Yana Bromberg",
       school: "Emory University",
       email: "yana@bromberglab.org",
+      profile: "/profile-bromberg.png"
     },
     {
       name: "Liang Zhao",
       school: "Emory University",
       email: "liang.zhao@emory.edu",
+      profile: "/profile-zhao.png"
     },
   ];
 
@@ -35,6 +38,7 @@ const Organizers = () => {
               name={person.name}
               school={person.school}
               email={person.email}
+              profile={person.profile}
             />
           ))}
         </div>
@@ -43,10 +47,12 @@ const Organizers = () => {
   );
 };
 
-const PeopleCard = ({ name, school, email }) => {
+const PeopleCard = ({ name, school, email, profile }) => {
   return (
     <div className="flex flex-col gap-3">
-      <div className="bg-neutral-100 size-[160px] rounded-xl"></div>
+      <div className="bg-neutral-100 size-[160px] rounded-xl overflow-hidden">
+        <img src={profile} alt="" className="w-full h-full object-cover" />
+      </div>
       <div className="">
         <h3 className="text-[18px] font-semibold mb-1">{name}</h3>
         <p className="text-[14px] m-0 text-neutral-200">{school}</p>
