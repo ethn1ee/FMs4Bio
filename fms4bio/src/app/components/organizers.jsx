@@ -1,12 +1,6 @@
 "use client";
 
-const People = () => {
-  const workshopChair = {
-    name: "Amarda Shehu",
-    school: "George Mason University",
-    email: "amarda@gmu.edu",
-  };
-
+const Organizers = () => {
   const workshopCommittee = [
     {
       name: "Amarda Shehu",
@@ -26,24 +20,23 @@ const People = () => {
   ];
 
   return (
-    <section id="people" className="w-[70vw] mx-auto py-[100px] flex flex-col gap-10">
-      <h1 className="w-[calc((100vw-240px)/4)] text-[40px] font-bold text-neutral-100">
-        PEOPLE
-      </h1>
+    <section
+      id="organizers"
+      className="w-[70vw] mx-auto py-[100px] flex flex-col gap-10"
+    >
+      <h1 className="text-[40px] font-bold text-neutral-100">ORGANIZERS</h1>
 
       <div className="flex flex-col gap-10">
-        <div>
-          <h2 className="text-[24px] font-bold mb-6">WORKSHOP ORGANIZERS</h2>
-          <div className="flex flex-wrap gap-6">
-            {workshopCommittee.map((person, i) => (
-              <PeopleCard
-                key={i}
-                name={person.name}
-                school={person.school}
-                email={person.email}
-              />
-            ))}
-          </div>
+        {/* <h2 className="text-[24px] font-bold mb-6">WORKSHOP ORGANIZERS</h2> */}
+        <div className="flex flex-wrap gap-6">
+          {workshopCommittee.map((person, i) => (
+            <PeopleCard
+              key={i}
+              name={person.name}
+              school={person.school}
+              email={person.email}
+            />
+          ))}
         </div>
       </div>
     </section>
@@ -63,4 +56,4 @@ const PeopleCard = ({ name, school, email }) => {
   );
 };
 
-export default People;
+export default Organizers;

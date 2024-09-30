@@ -9,8 +9,10 @@ const Nav = () => {
 
   const links = [
     { type: "section", name: "about", href: "#about" },
-    { type: "section", name: "details", href: "#details" },
-    { type: "section", name: "people", href: "#people" },
+    { type: "section", name: "program", href: "#program" },
+    { type: "section", name: "keynote speakers", href: "#speakers" },
+    { type: "section", name: "organizers", href: "#organizers" },
+    { type: "section", name: "student co-organizers", href: "#student-organizers" },
     {
       type: "site",
       name: "AAAI 2024",
@@ -40,7 +42,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="fixed w-screen h-[100px] z-[1000] flex justify-end gap-[40px] px-[80px] items-center bg-white">
+    <nav className="fixed w-screen h-[100px] z-[1000] flex justify-center gap-[40px] px-[80px] items-center bg-white">
       {links.map((link, i) => (
         <Link key={i} href={link.href}>
           <motion.span

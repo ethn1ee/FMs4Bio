@@ -1,24 +1,7 @@
 "use client";
 
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
-import { motion } from "framer-motion";
-import { useState } from "react";
-
-const Details = () => {
+const Program = () => {
   const details = [
-    {
-      title: "TOPICS",
-      content: `
-        <p>In addition to the following research themes, but we encourage novel contributions from researchers that bring different perspectives on the core focus of the workshop:</p>
-        <ul>
-          <li>Learning from Incomplete Data of Different Modalities</li>
-          <li>Grounding Foundation Models in Knowledge Beyond the Data</li>
-          <li>Reconciling Disparate Spatio-temporal scale and Varying Fidelity in Multimodal Data</li>
-          <li>Beyond Prediction: Answering the How and the Why</li>
-          <li>Quantifying Confidence of Predictions with Foundation Models</li>
-        </ul>
-      `,
-    },
     {
       title: "FORMAT",
       content: `
@@ -60,53 +43,30 @@ const Details = () => {
     },
   ];
 
-  const [selectedDetail, setSelectedDetail] = useState(null);
-
   return (
     <section
-      id="details"
+      id="program"
       className="w-[70vw] mx-auto py-[100px] flex flex-col gap-10"
     >
-      <h1 className="text-[40px] font-bold text-neutral-100">DETAILS</h1>
+      <h1 className="text-[40px] font-bold text-neutral-100">PROGRAM</h1>
       <div className="flex flex-col">
         {details.map((detail, i) => (
-          <ToggleDetail
-            key={i}
-            title={detail.title}
-            content={detail.content}
-            selectedDetail={selectedDetail}
-            setSelectedDetail={setSelectedDetail}
-          />
+          <Detail key={i} title={detail.title} content={detail.content} />
         ))}
       </div>
     </section>
   );
 };
 
-const ToggleDetail = ({
-  title,
-  content,
-  selectedDetail,
-  setSelectedDetail,
-}) => {
-  const isSelected = selectedDetail === title;
-
-  const handleClick = () => {
-    if (isSelected) {
-      setSelectedDetail(null);
-      return;
-    }
-    setSelectedDetail(title);
-  };
-
+export const Detail = ({ title, content }) => {
   return (
     <div className="border-t-2 border-neutral-100 overflow-hidden">
-      <motion.div className="flex gap-3 items-center py-[24px] cursor-pointer">
+      <div className="flex gap-3 items-center py-[24px]">
         <h2 className="text-[24px] font-bold">{title}</h2>
-      </motion.div>
+      </div>
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </div>
   );
 };
 
-export default Details;
+export default Program;

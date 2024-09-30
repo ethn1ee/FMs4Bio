@@ -1,17 +1,17 @@
 "use client";
 
 import About from "./components/about";
-import Details from "./components/details";
-import Home from "./components/home";
-import People from "./components/people";
+import Program from "./components/program";
+import Organizers from "./components/organizers";
+import Speakers from "./components/speakers";
 
 const App = () => {
   return (
     <>
-      <Home />
       <About />
-      <Details />
-      <People />
+      <Program />
+      <Speakers />
+      <Organizers />
     </>
   );
 };
