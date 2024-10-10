@@ -6,8 +6,8 @@ const StudentOrganizers = () => {
   const studentOrganizers = [
     {
       name: "Weisen Zhao",
-      // school: "George Mason University",
-      email: "",
+      school: "George Mason University",
+      email: "wzhao9@gmu.edu",
       profile: "/profile-weisen_zhao.png",
     },
   ];
