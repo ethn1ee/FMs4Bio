@@ -47,7 +47,7 @@ const Organizers = () => {
   );
 };
 
-const PeopleCard = ({ name, school, email, profile }) => {
+export const PeopleCard = ({ name, school, email, profile }) => {
   return (
     <div className="flex flex-col gap-3">
       <div className="bg-neutral-100 size-[160px] rounded-xl overflow-hidden">

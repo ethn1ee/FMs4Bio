@@ -19,7 +19,7 @@ const Nav = () => {
     },
     {
       type: "site",
-      name: "back",
+      name: "LLMs4Science",
       href: "https://llms4science-community.github.io/index.html",
     },
   ];
@@ -49,15 +49,26 @@ const Nav = () => {
     <nav className="fixed w-screen h-[100px] z-[1000] flex justify-center gap-[40px] px-[80px] items-center bg-white">
       {links.map((link, i) => (
         <Link key={i} href={link.href}>
-          <motion.span
-            animate={{
-              color:
-                link.type === "section" && activeSection === link.href.substring(1) ? "#000000" : "#a0a0a0",
-            }}
-            className="font-semibold"
-          >
-            {link.name.toUpperCase()}
-          </motion.span>
+          {link.type === "section" ? (
+            <motion.span
+              animate={{
+                color:
+                  activeSection === link.href.substring(1)
+                    ? "#000000"
+                    : "#a0a0a0",
+              }}
+              className="font-semibold"
+            >
+              {link.name.toUpperCase()}
+            </motion.span>
+          ) : (
+            <motion.span
+              whileHover={{ borderColor: "#000000" }}
+              className="font-semibold px-4 py-2 rounded-md border border-neutral-200 text-black"
+            >
+              {link.name.toUpperCase()}
+            </motion.span>
+          )}
         </Link>
       ))}
     </nav>
