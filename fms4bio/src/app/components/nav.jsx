@@ -12,11 +12,15 @@ const Nav = () => {
     { type: "section", name: "program", href: "#program" },
     { type: "section", name: "keynote speakers", href: "#speakers" },
     { type: "section", name: "organizers", href: "#organizers" },
-    { type: "section", name: "student co-organizers", href: "#student-organizers" },
+    {
+      type: "section",
+      name: "student co-organizers",
+      href: "#student-organizers",
+    },
     {
       type: "site",
-      name: "AAAI 2024",
-      href: "https://llms4science-community.github.io/aaai2024.html",
+      name: "back",
+      href: "https://llms4science-community.github.io/index.html",
     },
   ];
 
