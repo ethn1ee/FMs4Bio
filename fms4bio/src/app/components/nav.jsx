@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 const Nav = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -64,9 +65,10 @@ const Nav = () => {
           ) : (
             <motion.span
               whileHover={{ borderColor: "#000000" }}
-              className="font-semibold px-4 py-2 rounded-md border border-neutral-200 text-black"
+              className="flex gap-2 items-center font-semibold px-4 py-2 rounded-md border border-neutral-200 text-black"
             >
               {link.name.toUpperCase()}
+              <ArrowTopRightOnSquareIcon className="size-5 text-black" />
             </motion.span>
           )}
         </Link>
