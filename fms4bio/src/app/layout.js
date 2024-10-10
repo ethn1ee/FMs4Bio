@@ -1,5 +1,3 @@
-import Nav from "./components/nav";
-import "./globals.css";
 import { Hanken_Grotesk } from "next/font/google";
 
 const hankenGrotesk = Hanken_Grotesk({ subsets: ["latin"] });
@@ -13,9 +11,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${hankenGrotesk.className} antialiased flex justify-center`}>
-        <Nav />
-        <main className="w-[calc(100vw-120px)] max-w-[2000px]">{children}</main>
+      <body
+        className={`${hankenGrotesk.className} antialiased`}
+      >
+        <main>{children}</main>
       </body>
     </html>
   );
